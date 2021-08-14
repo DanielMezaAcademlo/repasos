@@ -1,0 +1,47 @@
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+button {
+  margin: 3rem auto;
+  padding: 1rem 5rem;
+  border: 2px solid #000;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.main-container {
+  width: 50%;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.first-image,
+.second-image {
+  width: 90%;
+  position: absolute;
+  top: 0;
+}
+
+.first-image img,
+.second-image img {
+  max-width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+}
