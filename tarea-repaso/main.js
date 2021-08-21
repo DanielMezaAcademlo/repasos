@@ -23,6 +23,12 @@ const pokemonList = () => {
     pokemonName.innerText = currentPokemon.name;
     pokemonType.innerText = currentPokemon.type;
 
+    pokemonType.classList.add('col-3');
+    pokemonName.classList.add('col-3');
+
+    //Agregar un bg
+    pokemonType.style.background = switchColor(currentPokemon.type);
+
     //Agregar una clase al contenedor creado
     pokemonContainer.classList.add("pokemonElement");
 

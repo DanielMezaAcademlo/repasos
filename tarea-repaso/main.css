@@ -1,0 +1,10 @@
+.pokemonElement {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+
+    background-color: #00000050;
+}
+.col-3 {
+    width: 25%;
+}
