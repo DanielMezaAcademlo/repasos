@@ -12,14 +12,28 @@ const div1 = document.getElementById("div1");
 const pokemonList = () => {
   pokemon.forEach(currentPokemon => {
     console.log(currentPokemon);
-    const pokemonContainer = document.createElement("div");
-    pokemonContainer.classList.add("pokemonElement");
-    div1.appendChild(pokemonContainer);
 
+    //Creamos el contenedor de cada pokemon
+    const pokemonContainer = document.createElement("div");
+    //Creamos p para el nombre y tipo
+    const pokemonName = document.createElement("p");
+    const pokemonType = document.createElement("p");
+    //Agregar text a los párrafos
+    pokemonName.innerText = currentPokemon.name;
+    pokemonType.innerText = currentPokemon.type;
+
+    //Agregar una clase al contenedor creado
+    pokemonContainer.classList.add("pokemonElement");
+
+    //Agregar elementos
+
+    //Contenedor principal de cada pokemon al contenedor principal general
+    div1.appendChild(pokemonContainer);
+    //Agregar nombre y tipo al contenedor de cada pokemon
+    pokemonContainer.appendChild(pokemonName);
+    pokemonContainer.appendChild(pokemonType);
   });
 };
 
 //LLAMADO A LA FUNCIÓN
 pokemonList();
-
-
