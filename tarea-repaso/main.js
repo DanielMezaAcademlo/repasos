@@ -12,6 +12,7 @@ const div1 = document.getElementById("div1");
 const pokemonList = () => {
   pokemon.forEach(currentPokemon => {
     console.log(currentPokemon);
+    switchColor(currentPokemon.type);
 
     //Creamos el contenedor de cada pokemon
     const pokemonContainer = document.createElement("div");
@@ -35,5 +36,21 @@ const pokemonList = () => {
   });
 };
 
+const switchColor = (tipo) => {
+  if(tipo === "electric"){
+    return "yellow"
+  }
+  else if(tipo === "fire"){
+    return "red"
+  }
+  else if(tipo === "normal"){
+    return "grey"
+  }
+  else if(tipo === "water"){
+    return "blue";
+  }
+
+};
 //LLAMADO A LA FUNCIÓN
 pokemonList();
+
