@@ -11,9 +11,6 @@ const div1 = document.getElementById("div1");
 //FUNCIÓN QUE RECORRE EL OBJETO
 const pokemonList = () => {
   pokemon.forEach(currentPokemon => {
-    console.log(currentPokemon);
-    switchColor(currentPokemon.type);
-
     //Creamos el contenedor de cada pokemon
     const pokemonContainer = document.createElement("div");
     //Creamos p para el nombre y tipo
@@ -23,11 +20,11 @@ const pokemonList = () => {
     pokemonName.innerText = currentPokemon.name;
     pokemonType.innerText = currentPokemon.type;
 
-    pokemonType.classList.add('col-3');
-    pokemonName.classList.add('col-3');
+    pokemonType.classList.add("col-3");
+    pokemonName.classList.add("col-3");
 
     //Agregar un bg
-    pokemonType.style.background = switchColor(currentPokemon.type);
+    pokemonType.style.color = switchColor(currentPokemon.type);
 
     //Agregar una clase al contenedor creado
     pokemonContainer.classList.add("pokemonElement");
@@ -42,21 +39,16 @@ const pokemonList = () => {
   });
 };
 
-const switchColor = (tipo) => {
-  if(tipo === "electric"){
-    return "yellow"
-  }
-  else if(tipo === "fire"){
-    return "red"
-  }
-  else if(tipo === "normal"){
-    return "grey"
-  }
-  else if(tipo === "water"){
+const switchColor = tipo => {
+  if (tipo === "electric") {
+    return "yellow";
+  } else if (tipo === "fire") {
+    return "red";
+  } else if (tipo === "normal") {
+    return "grey";
+  } else if (tipo === "water") {
     return "blue";
   }
-
 };
 //LLAMADO A LA FUNCIÓN
 pokemonList();
-
